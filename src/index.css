@@ -1,13 +1,31 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
-}
+/* index.css - Core Variables */
+:root {
+    --background: #0d1117; /* Dark, elegant background */
+    --card-bg: #161b22; /* Slightly lighter for contrast */
+    --primary-color: #00c851; /* Vibrant green for accents */
+    --secondary-color: #1a7f37; /* Darker green for hover */
+    --text-color: #d1d5db; /* Soft white for readable text */
+    --muted-text: #a1a6ad; /* Muted text for subtle hints */
+    --button-text: #0d1117; /* Button text contrasting the green */
+    --shadow-color: rgba(0, 0, 0, 0.5);
+    --font-primary: 'Poppins', sans-serif; /* Clean and professional */
+  }
+  
+  /* General styles */
+  body {
+    background-color: var(--background);
+    color: var(--text-color);
+    font-family: var(--font-primary);
+    margin: 0;
+    padding: 0;
+  }
+  
+  h1, h2, h3 {
+    color: var(--primary-color);
+  }
+  
+  button {
+    font-family: var(--font-primary);
+    cursor: pointer;
+  }
+  

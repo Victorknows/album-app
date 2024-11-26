@@ -1,0 +1,65 @@
+/* src/styles/LandingPage.module.css */
+.container {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: var(--background);
+  color: var(--text-color);
+  text-align: center;
+}
+
+.textContainer {
+  margin-bottom: 30px;
+}
+
+.typing {
+  font-size: 2.5rem;
+  color: var(--primary-color);
+  overflow: hidden;
+  border-right: 2px solid var(--primary-color);
+  white-space: nowrap;
+  width: 0;
+  animation: typing 3s steps(40, end), blink 0.5s step-end infinite;
+}
+
+.highlight {
+  color: var(--secondary-color);
+}
+
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+@keyframes blink {
+  from,
+  to {
+    border-color: transparent;
+  }
+  50% {
+    border-color: var(--primary-color);
+  }
+}
+
+.glowButton {
+  background: var(--primary-color);
+  color: var(--button-text);
+  font-size: 1rem;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  box-shadow: 0 4px 15px var(--primary-color);
+  transition: all 0.3s ease-in-out;
+}
+
+.glowButton:hover {
+  transform: scale(1.1);
+  box-shadow: 0 8px 20px var(--primary-color);
+  background: var(--secondary-color);
+}
