@@ -1,71 +1,163 @@
-# album-app
-# Getting Started with Create React App
+Albums App Documentation
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Overview
 
-## Available Scripts
+The Albums App is a React-based web application designed to explore users and their photo albums. Users can sign in, browse user profiles, view albums, and explore photos within albums. It leverages the jsonplaceholder.typicode.com API for user, album, and photo data.
 
-In the project directory, you can run:
+Features
 
-### `npm start`
+1. User Management
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+Landing Page
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+Users can sign in with Google to access the app.
 
-### `npm test`
+A welcome message introduces the app's features.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Home Page
 
-### `npm run build`
+Displays a list of users fetched from the API.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Allows navigation to a user's albums.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+2. Album Management
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+Album Page
 
-### `npm run eject`
+Displays albums for a selected user.
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+Allows navigation to view photos in an album.
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+3. Photo Management
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+Photos Page
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+Displays photos within a selected album.
 
-## Learn More
+Allows navigation to view photo details.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+Photo Details Page
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+Displays photo details, including title and full image.
 
-### Code Splitting
+Enables editing of photo titles with real-time feedback via react-toastify notifications.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+Code Structure
 
-### Analyzing the Bundle Size
+Pages
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+LandingPage.js
 
-### Making a Progressive Web App
+Handles user sign-in using Firebase.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+Redirects to the Home Page after successful login.
 
-### Advanced Configuration
+HomePage.js
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+Fetches and displays a list of users.
 
-### Deployment
+Users can navigate to a specific user's albums.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+AlbumPage.js
 
-### `npm run build` fails to minify
+Fetches and displays albums for a selected user.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Users can navigate to an album's photos.
+
+PhotosPage.js
+
+Fetches and displays photos in a grid layout.
+
+Users can navigate to view photo details.
+
+PhotoDetails.js
+
+Fetches and displays detailed information about a photo.
+
+Enables title editing with toast notifications.
+
+Styling
+
+Each page has its own CSS module to encapsulate styles and maintain modularity.
+
+Components like buttons and grids are styled for consistent user experience.
+
+API Integration
+
+Endpoints Used
+
+https://jsonplaceholder.typicode.com/users - Fetches user data.
+
+https://jsonplaceholder.typicode.com/users/{userId}/albums - Fetches albums for a user.
+
+https://jsonplaceholder.typicode.com/albums/{albumId}/photos - Fetches photos in an album.
+
+https://jsonplaceholder.typicode.com/photos/{photoId} - Fetches details of a specific photo.
+
+Error Handling
+
+Uses try-catch blocks to handle API errors gracefully.
+
+Displays error messages for failed fetch requests.
+
+Navigation Flow
+
+Landing Page
+
+Sign in and navigate to the Home Page.
+
+Home Page
+
+Select a user to view their albums.
+
+Album Page
+
+Select an album to view its photos.
+
+Photos Page
+
+Select a photo to view its details.
+
+Photo Details Page
+
+View and edit photo details.
+
+Libraries and Tools Used
+
+React: For building the user interface.
+
+React Router: For managing navigation and routing.
+
+React Icons: For adding icons to the UI.
+
+React Toastify: For displaying notifications.
+
+Firebase: For Google Sign-In functionality.
+
+CSS Modules: For modular and scoped styling.
+
+Future Enhancements
+
+Add user authentication with persistent sessions.
+
+Enable uploading and managing user-created albums and photos.
+
+Improve UI responsiveness for mobile devices.
+
+Implement search functionality for users, albums, and photos.
+
+Setup Instructions
+
+Clone the repository:
+
+git clone <repository-url>
+
+Install dependencies:
+
+npm install
+
+Start the development server:
+
+npm start
+
+Open the app in your browser at http://localhost:3000.
