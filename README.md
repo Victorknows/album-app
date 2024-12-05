@@ -6,7 +6,7 @@ The Albums App is a React-based web application designed to explore users and th
 
 # Features
 
-1. User Management
+# 1. User Management
 
 Landing Page
 
@@ -42,9 +42,9 @@ Displays photo details, including title and full image.
 
 Enables editing of photo titles with real-time feedback via react-toastify notifications.
 
-Code Structure
+## Code Structure
 
-Pages
+# Pages
 
 LandingPage.js
 
@@ -82,7 +82,7 @@ Each page has its own CSS module to encapsulate styles and maintain modularity.
 
 Components like buttons and grids are styled for consistent user experience.
 
-API Integration
+## API Integration
 
 Endpoints Used
 
@@ -94,7 +94,7 @@ https://jsonplaceholder.typicode.com/albums/{albumId}/photos - Fetches photos in
 
 https://jsonplaceholder.typicode.com/photos/{photoId} - Fetches details of a specific photo.
 
-Error Handling
+# Error Handling
 
 Uses try-catch blocks to handle API errors gracefully.
 
