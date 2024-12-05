@@ -1,4 +1,4 @@
-Albums App Documentation
+## Albums App Documentation
 
 Overview
 
