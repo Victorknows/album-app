@@ -1,10 +1,10 @@
-## Albums App Documentation
+### Albums App Documentation
 
-Overview
+## Overview
 
 The Albums App is a React-based web application designed to explore users and their photo albums. Users can sign in, browse user profiles, view albums, and explore photos within albums. It leverages the jsonplaceholder.typicode.com API for user, album, and photo data.
 
-Features
+# Features
 
 1. User Management
 
